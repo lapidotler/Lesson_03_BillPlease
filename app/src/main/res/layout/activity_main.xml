@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:text="@string/bill"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/viewAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Amount" />
+
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/viewPax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Num of Pax" />
+
+        <EditText
+            android:id="@+id/editPax"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="Enter total no. of ppl"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <ToggleButton
+                android:id="@+id/toggleButtonSVS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="No SVS"
+                android:textOn="SVS" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonGST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="No GST"
+                android:textOn="GST" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/viewDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Discount (%)" />
+
+            <EditText
+                android:id="@+id/editDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="%"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/viewPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:text="Payment by:" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroupPayment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="Cash" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPayNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PayNow" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/buttonSplit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Split" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/viewTotalBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Total Bill: $"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/viewEachPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Each Pays: $"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
